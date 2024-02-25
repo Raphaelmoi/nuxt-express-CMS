@@ -1,69 +1,38 @@
-# expressApi
+# Nuxt-Express CMS (Never Finished and Ugly)
 
-## Build Setup
+Welcome to Nuxt-Express CMS, a CMS project that aims to utilize Nuxt.js for the frontend and Express.js for the backend. Please note that this project is currently in its early stages and is far from completion. Expect bugs, incomplete features, and an overall lack of polish.
 
-```bash
-# install dependencies
-$ npm install
+## Introduction
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+Nuxt-Express CMS is intended to provide a simple yet functional content management system for websites. It leverages the power of Nuxt.js for server-side rendering and client-side interactivity, coupled with Express.js for building the backend API.
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+## Features
 
-# generate static project
-$ npm run generate
-```
+- Basic user authentication (login, logout)
+- CRUD operations for managing content (create, read, update, delete)
+- Minimalistic UI (very much work in progress)
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+## Technologies Used
 
-## Special Directories
+- Nuxt.js
+- Vue.js
+- Express.js
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+## Getting Started
 
-### `assets`
+To get started with this project, follow these steps:
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+1. Clone this repository to your local machine.
+2. Install dependencies by running `npm install` in both the `frontend` and `backend` directories.
+3. Set up your MongoDB database and configure the connection in the backend.
+4. Start the backend server by running `npm start` in the `backend` directory.
+5. Start the frontend development server by running `npm run dev` in the `frontend` directory.
+6. Visit `http://localhost:3000` in your web browser to access the application.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+## License
 
-### `components`
+This project is licensed under the [MIT License](LICENSE).
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+## Disclaimer
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+This project is a personal endeavor and is not intended for production use in its current state. Use at your own risk.
