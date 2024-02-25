@@ -36,3 +36,5 @@ This project is licensed under the [MIT License](LICENSE).
 ## Disclaimer
 
 This project is a personal endeavor and is not intended for production use in its current state. Use at your own risk.
+
+![Capture d’écran 2024-02-25 132329](https://github.com/Raphaelmoi/nuxt-express-CMS/assets/46026576/d490372c-9371-47c6-82fc-d1a9f48221c8)
