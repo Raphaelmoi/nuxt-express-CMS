@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --color-1: #e13f25;
+  --color-2: #e95a6d;
+  --color-3: #f194b9;
+  --clear: rgb(219, 228, 241);
+  --clear-1: #788ba7;
+  --clear-2: #c5cdd9;
+  --clear-3: #b9cbe5;
+  --clear-4: #656e7a;
+  --clear-bg-txt: #222;
+  --dark: #37474f;
+  --dark-1: #546e7a;
+  --dark-2: #29434e;
+  --dark-3: #819ca9;
+  --container: 5%;
+  scrollbar-color: var(--color-1) #eee;
+  scrollbar-width: 18px;
+  --tile-gradiant: linear-gradient(-45deg, #94a6c133, #778daf88, #5f728fbb);
+  --tile-gradiant-2: linear-gradient(45deg, #94a6c133, #778daf88, #5f728fbb);
+}
+::-webkit-scrollbar {
+  width: 18px;
+}
+::-webkit-scrollbar-track {
+  background: var(--clear);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--clear-1);
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clear-2);
+}
+
+@media all and (max-width: 1000px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  :root {
+    scrollbar-width: 8px;
+  }
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: var(--clear-bg-txt);
+}
+a {
+  text-decoration: none;
+  color: var(--clear-bg-txt);
+}
+.arrow {
+  border: solid var(--clear-bg-txt);
+  border-left: 1px;
+  border-bottom: 1px;
+  padding: 3px;
+}
+.arrow-left {
+  transform: rotate(-135deg);
+}
+.arrow-down {
+  transform: rotate(90deg);
+}
+.arrow-right {
+  transform: rotate(45deg);
+}
+.btn {
+  padding: 0.5em 1.2em;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  border: 2px var(--color-1) solid;
+  border-radius: 2px;
+  color: white;
+  background: var(--color-1);
+  transition: 0.3s ease;
+  text-decoration: none;
+  margin: 2px 0;
+  cursor: pointer;
+}
+.btn i {
+  margin-right: 1em;
+}
+.btn:hover {
+  border: 2px var(--color-2) solid;
+}
+
+.btn-dark {
+  text-transform: uppercase;
+  justify-content: center;
+  background: var(--dark-1);
+  border: 2px var(--dark) solid;
+}
+.btn-dark:hover {
+  background: var(--dark);
+  border: 2px var(--dark) solid;
+}
+.noclick {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.tac {
+  text-align: center;
+}
+/* Customize the label (the check) */
+.check {
+  display: block;
+  position: absolute;
+  top: 0;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background: #fff7;
+  border: 2px var(--color-1) solid;
+}
+.check:hover input ~ .checkmark {
+  background-color: var(--color-3);
+}
+.check input:checked ~ .checkmark {
+  background-color: var(--color-1);
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.check input:checked ~ .checkmark:after {
+  display: block;
+}
+.check .checkmark:after {
+  left: 9px;
+  top: 2px;
+  width: 5px;
+  height: 14px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.filtersBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin: 0 0 2em; */
+  padding-right: 1em;
+}
+.btnsDate {
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.btnsDate a,
+.btnsDate div {
+  border: 1px var(--clear-3) solid;
+  font-size: 0.74rem;
+  width: 200px;
+  text-align: center;
+  background: var(--clear-3);
+  color: var(--clear-bg-txt);
+
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  padding: 4px 0;
+}
+.btnsDate .active {
+  background: var(--clear-1);
+  color: white;
+}
+
+.filtersBar .selectQtt {
+  border: 2px var(--clear-1) solid;
+  background: var(--clear-1);
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0px 0px 0 8px;
+  font-size: 0.74rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.filtersBar select {
+  padding: 2px 0 2px 4px;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  /* border: 2px var(--dark-1) solid; */
+}
+/* **************************************** */
+.pagination {
+  margin-top: 1.5em;
+  width: 50%;
+  margin-left: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.pagination div {
+  border: 1px var(--clear-1) solid;
+  width: 34px;
+  height: 31px;
+  border-radius: 4px;
+  margin: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.pagination div:hover,
+.pagination div.active {
+  background: var(--clear-1);
+  color: white;
+}
+.pagination div:hover .arrow,
+.pagination div.active .arrow {
+  border-color: white;
+}
+.pagination .arrow {
+  border-color: var(--clear-1);
+}
+/* **************************************** */
+.header_site {
+  height: 200px;
+  background: var(--clear-3);
+  position: relative;
+  padding: 1em var(--container);
+  display: flex;
+  align-items: center;
+}
+.header_site::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: var(--clear-3);
+  clip-path: polygon(70% 100%, 0 0, 100% 0);
+  filter: drop-shadow(0, 0, 7px, red);
+}
+.header_site h1 {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 2.5em;
+}
+.page_content {
+  background: #fff;
+  padding: 1em;
+  position: relative;
+  width: calc(90% - 2em);
+  margin-left: var(--container);
+  box-shadow: 0 0 16px #0001;
+  margin-bottom: 1em;
+}
+.pagecontent_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 4px solid var(--clear);
+}
+.pagecontent_head .titleBloc {
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+.pagecontent_head .actionBtn img {
+  cursor: pointer;
+}
+
+.btn-gradient {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  border: 2px #5f728f77 solid;
+  width: fit-content;
+  margin: 1em auto;
+  padding: 0.5em 2em;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    -45deg,
+    var(--clear-3),
+    #94a6c1,
+    #778daf,
+    #5f728f,
+    #94a6c1
+  );
+  background-size: 150% auto;
+  background-position: center right;
+  cursor: pointer;
+  transition: 0.5s ease;
+  color: white;
+}
+.btn-gradient:hover {
+  /* border: 2px #5f728f33 solid; */
+  background-position: center 50%;
+}
+.smlBtn {
+  padding: 0.1em 1.5em;
+  border-radius: 0.5em;
+  margin-right: 4px;
+  border: 2px var(--clear-1) solid;
+  /* box-shadow: inset 0 0 0 2px #00000020; */
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.85em;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.smlBtn:hover {
+  background: var(--clear);
+}
